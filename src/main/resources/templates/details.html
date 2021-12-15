@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <th:block th:include="~{fragments/head}"></th:block>
+
+</head>
+<body>
+<div class="container-fluid">
+    <header>
+<!--        <script th:src="@{/js/job.js}"></script>-->
+        <th:block th:include="~{fragments/navbar}"></th:block>
+    </header>
+    <br>
+    <div>
+        <main class="container">
+
+<div align="center" style="margin-top: 100px">
+    <h2> Succeeded!</h2>
+    <h5>Yours Info</h5>
+    <span>Your position:</span><span th:text="${model.description}"></span><br/>
+    <span>Your dream profession:</span><span th:text="${model.profession}"></span><br/>
+    <span>When started last job:</span><span th:text="${model.start}"></span><br/>
+    <span>Today:</span><span th:text="${model.today}"></span><br/>
+
+</div>
+            </br>
+            <a th:href = "@{/}"  class="btn btn-warning col-3">Back</a>
+            </br>
+        </main>
+    </div>
+
+    </br>
+
+</div>
+<footer>
+    <div th:include="~{fragments/footer}"></div>
+</footer>
+
+</body>
+</html>
+
+
